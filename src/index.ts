@@ -18,7 +18,7 @@ app.post('/api/bookings', async (req, res) => {
     const booking = await prisma.booking.create({
       data: {
         name: req.body.name,
-        email: req.body.email||'',
+        email: req.body.email,
         phone: req.body.phone,
         eventType: req.body.eventType,
         eventDate: new Date(req.body.eventDate),
